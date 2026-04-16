@@ -1,0 +1,90 @@
+.layout {
+  display: grid;
+  grid-template-rows: 56px 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "encabezado encabezado"
+    "lateral principal";
+  height: 100vh;
+}
+
+.barra-lateral {
+  grid-area: lateral;
+  background: var(--color-superficie);
+  border-right: 1px solid var(--color-borde);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.barra-herramientas {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.boton-accion {
+  padding: 6px 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background: var(--color-superficie);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.boton-accion:hover {
+  background: var(--color-hover);
+}
+
+.boton-accion:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.boton-eliminar {
+  color: var(--color-eliminar);
+  border-color: var(--color-eliminar);
+}
+
+.boton-eliminar:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.indicador-guardado {
+  font-size: 12px;
+  color: var(--color-texto-secundario);
+  margin-left: auto;
+}
+
+.contenido-principal {
+  grid-area: principal;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.detalle-nodo h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.detalle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detalle-info p {
+  font-size: 14px;
+  color: var(--color-texto-secundario);
+}
+
+.detalle-info strong {
+  color: var(--color-texto);
+}
+
+.sin-seleccion {
+  color: var(--color-texto-secundario);
+}

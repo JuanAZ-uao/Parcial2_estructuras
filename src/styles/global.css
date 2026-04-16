@@ -1,0 +1,83 @@
+:root {
+  --color-primario: #2563eb;
+  --color-primario-hover: #1d4ed8;
+  --color-fondo: #f8fafc;
+  --color-superficie: #ffffff;
+  --color-texto: #1e293b;
+  --color-texto-secundario: #64748b;
+  --color-borde: #e2e8f0;
+  --color-seleccionado: #dbeafe;
+  --color-hover: #f1f5f9;
+  --color-error: #ef4444;
+  --color-eliminar: #dc2626;
+  --radio-borde: 8px;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+.cargando {
+  padding: 16px;
+  color: var(--color-texto-secundario);
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-texto-secundario);
+}
+
+.campo input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--color-primario);
+}
+
+.boton-primario {
+  width: 100%;
+  padding: 10px;
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio-borde);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.boton-primario:hover {
+  background: var(--color-primario-hover);
+}

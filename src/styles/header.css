@@ -1,0 +1,36 @@
+.encabezado {
+  grid-area: encabezado;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: var(--color-primario);
+  color: white;
+}
+
+.encabezado-titulo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.encabezado-usuario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.boton-cerrar {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radio-borde);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.boton-cerrar:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
